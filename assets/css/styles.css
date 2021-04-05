@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --light-color-header: #FAFAFA;
+    --dark-color-header: #212121 ;
+
+    --light-color-background: #ECEFF1;
+    --dark-color-background: #101010;
+
+    --ligth-icon-header: url('https://i.ibb.co/yBvCR7J/icon.png');
+    --dark-icon-header: url('https://i.ibb.co/42knHtB/cherytb.png');
+
+    --light-font: rgb(19, 19, 19);
+    --dark-font: #FAFAFA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--light-color-background);
+    color: var(--light-font);
+    font-size: 16px;
+    transition: 0.3s ease all;
+}
+
+body.dark{
+    background: var(--dark-color-background);
+    color: var(--dark-font);
+}
+
+/*Inpust Sin Estilos */
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* //////////////////// HEADER //////////////////// */
+.container-headerA{
+    height: 200px;
+    background: var(--light-color-header);
+}
+
+body.dark .container-headerA{
+    background: var(--dark-color-header);
+}
+
+.container-headerB{
+    margin: 0px auto;
+}
+
+/* ICON */
+.container-icon-header{
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+}
+
+.img-header{
+    width: 100%;
+    height: 100%;
+    background: var(--ligth-icon-header);
+    background-size: 100%;
+}
+
+body.dark .img-header{
+    background: var(--dark-icon-header);
+    background-size: 100%;
+}
+
+/* TEXTO */
+.container-text-header{
+    text-align: center;
+}
+
+/* BOTON */
+.container-switch-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+/* Cambio de modo DIA/NOCHE */
+.switch{
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    background: #f1f1f1;
+    top: -3px;
+    left: -4px;
+    right: unset;
+    border-radius: 1000px;
+    transition: 0.3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch:active{
+    background: orange;
+    color: black;
+}
+
+.switch:active::after{
+    right: -4px;
+    left: unset;
+}
+
+.active{
+    background: orange;
+    color: black;
+}
+
+.active::after{
+    right: -4px;
+    left: unset;
+    transition: 0.3s ease all;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: bloc;
+    background: none;
+    color: white;
+}
+
+/* Dispositivos Extra Pequeños (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Para Moviles: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+  
+@media only screen and (min-width: 600px) {
+    /* Para tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+  
+@media only screen and (min-width: 768px) {
+    /* Para Escritorio: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+  /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
