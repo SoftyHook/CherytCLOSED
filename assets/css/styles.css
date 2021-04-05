@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-    --light-color-header: #FAFAFA;
-    --dark-color-header: #212121 ;
+    --light-color-main: #FAFAFA;
+    --dark-color-main: #212121 ;
 
     --light-color-background: #ECEFF1;
     --dark-color-background: #101010;
@@ -12,6 +12,12 @@
 
     --light-font: rgb(19, 19, 19);
     --dark-font: #FAFAFA;
+
+    --light-switch: #FF9100;
+    --dark-switch: #2962FF;
+
+    --light-border: #E0E0E0;
+    --dark-border: #333333;
 }
 
 *{
@@ -32,6 +38,12 @@ body.dark{
     color: var(--dark-font);
 }
 
+/* DISPLAYS / FLOATS */
+.dib{
+    display: inline-block;
+}
+
+
 /*Inpust Sin Estilos */
 /* clears the 'X' from Internet Explorer */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
@@ -46,11 +58,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /* //////////////////// HEADER //////////////////// */
 .container-headerA{
     height: 200px;
-    background: var(--light-color-header);
+    background: var(--light-color-main);
 }
 
 body.dark .container-headerA{
-    background: var(--dark-color-header);
+    background: var(--dark-color-main);
 }
 
 .container-headerB{
@@ -79,6 +91,7 @@ body.dark .img-header{
 /* TEXTO */
 .container-text-header{
     text-align: center;
+    height: 100px;
 }
 
 /* BOTON */
@@ -91,14 +104,14 @@ body.dark .img-header{
 
 /* Cambio de modo DIA/NOCHE */
 .switch{
-    background: #343d5b;
+    background: var(--light-switch);
     border-radius: 1000px;
     border: none;
     position: relative;
     cursor: pointer;
     display: flex;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 5px;
 }
 
@@ -118,7 +131,7 @@ body.dark .img-header{
 }
 
 .switch:active{
-    background: orange;
+    background: var(--dark-switch);
     color: black;
 }
 
@@ -128,7 +141,7 @@ body.dark .img-header{
 }
 
 .active{
-    background: orange;
+    background: var(--dark-switch);
     color: black;
 }
 
@@ -142,9 +155,36 @@ body.dark .img-header{
     width: 30px;
     height: 30px;
     line-height: 30px;
-    display: bloc;
+    display: block;
     background: none;
     color: white;
+}
+
+/* //////////////////// MAIN //////////////////// */
+.container-mainA{
+    margin: 20px auto;
+    background: var(--light-color-main);
+    border-radius: 10px;
+}
+
+body.dark .container-mainA{
+    background: var(--dark-color-main);
+}
+
+.container-mainB{
+    padding: 10px;
+}
+
+.title-main{
+    border-bottom: 1px solid var(--light-border);
+}
+
+body.dark .title-main{
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.img-main img{
+    width: 100%;
 }
 
 /* Dispositivos Extra Pequeños (phones, 600px and down) */
@@ -179,9 +219,10 @@ body.dark .img-header{
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 }
+
   
-@media only screen and (min-width: 768px) {
-    /* Para Escritorio: */
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -194,7 +235,7 @@ body.dark .img-header{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-}
+  }
 
   /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
