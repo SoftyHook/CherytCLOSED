@@ -266,11 +266,6 @@ body.dark .title-main{
     transition: .5s ease all;
 }
 
-.sargento img{
-    width: auto;
-    height: 100%;
-}
-
 .img-main img:hover{
     transform: scale(1.1);
     transition: .5s ease all;
