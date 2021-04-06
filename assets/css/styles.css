@@ -18,12 +18,77 @@
 
     --light-border: #E0E0E0;
     --dark-border: #333333;
+
+    --light-color-thumb-scroll: #cccccc;
+    --dark-color-thumb-scroll: #757575;
+
+    --light-color-track-scroll: #e1e1e1;
+    --dark-color-track-scroll: #616161;
+
+    --light-uncolor: #E0E0E0;
+    --dark-uncolor: #424242;
+
+    --light-select: #BDBDBD;
+    --dark-select: #616161;
+
+    --light-published: #9E9E9E;
+    --dark-published: #616161;
+
+    --light-date: #616161;
+    --dark-date: #9E9E9E;
+
+    --light-footer: #03A9F4;
+    --dark-footer: #03A9F4;
 }
 
 *{
     margin: 0;
     padding: 0;
 }
+
+/* ///////////// SCROLL BAR /////////// */
+body::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+    background: var(--light-color-thumb-scroll);
+    border-radius: 4px;
+}
+
+body.dark::-webkit-scrollbar-thumb{
+    background: var(--dark-color-thumb-scroll);
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+/* ///////////// TRACK ////////////// */
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+body::-webkit-scrollbar-track {
+    background: var(--light-color-track-scroll);
+    border-radius: 4px;
+}
+
+body.dark::-webkit-scrollbar-track {
+    background: var(--dark-color-track-scroll);
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -41,6 +106,14 @@ body.dark{
 /* DISPLAYS / FLOATS */
 .dib{
     display: inline-block;
+}
+
+.f-right{
+    float: right;
+}
+
+.f-left{
+    float: left;
 }
 
 
@@ -183,8 +256,120 @@ body.dark .title-main{
     border-bottom: 1px solid var(--dark-border);
 }
 
+.img-main{
+    height: 200px;
+    overflow: hidden;
+}
+
 .img-main img{
     width: 100%;
+    transition: .5s ease all;
+}
+
+.sargento img{
+    width: auto;
+    height: 100%;
+}
+
+.img-main img:hover{
+    transform: scale(1.1);
+    transition: .5s ease all;
+}
+
+.container-proyectos-main{
+    padding: 20px 0;
+    height: 200px;
+    border-bottom: 1px solid var(--light-border);
+}
+
+body.dark .container-proyectos-main{
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.text-info-main{
+    height: 200px;
+}
+
+.img-masinfo-main img{
+    width: 100%;
+}
+
+.img-masinfo-main a{
+    margin: auto;
+}
+
+.img-masinfo-main{
+    width: 100%;
+    height: 200px;
+}
+
+.text-info-p{
+    height: 90%;
+}
+
+.unselect{
+    color: var(--light-uncolor);
+}
+
+body.dark .unselect{
+    color: var(--dark-uncolor);
+}
+
+.select{
+    color: var(--light-select);
+}
+
+body.dark .select{
+    color: var(--dark-select);
+}
+
+.published{
+    color: var(--light-published);
+}
+
+body.dark .published{
+    color: var(--dark-published);
+}
+
+.fecha{
+    color: var(--light-date);
+}
+
+body.dark .fecha{
+    color: var(--dark-date);
+}
+
+#git-icon{
+    color: var(--light-font);
+    font-size: 5rem;
+}
+
+body.dark #git-icon{
+    color: var(--dark-font);
+}
+
+/* //////////////////// FOOTER //////////////////// */
+.container-footerA{
+    background: var(--light-footer);
+}
+
+body.dark .container-footerA{
+    background: var(--dark-footer);
+}
+
+.container-footerB{
+    margin: 10px auto 0px auto;
+}
+
+.desarrollo-img img{
+    width: 100%;
+}
+
+.copy-footer{
+    margin-top: 30px;
+    min-height: 200px;
+    color: var(--dark-font);
+    font-size: 1rem;
 }
 
 /* Dispositivos Extra Pequeños (phones, 600px and down) */
