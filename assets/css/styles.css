@@ -382,6 +382,80 @@ body.dark .container-footerA{
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
+
+    .img-main {
+        height: auto;
+    }
+
+    .text-info-p {
+        height: auto;
+    }
+
+    .text-info-p h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .text-info-p p {
+        font-size: .8rem;
+    }
+
+    p.published {
+        font-size: 0.9rem;
+    }
+
+    .container-proyectos-main {
+        height: 325px;
+    }
+
+    .container-proyectos-main {
+    height: auto;
+    }
+
+    .f-left{
+        float: none;
+    }
+
+    .f-left-m{
+        float: left;
+    }
+
+    .f-right-m{
+        float: right;
+    }
+
+    .f-right{
+        float: none;
+    }
+
+    #git-icon {
+    font-size: 3rem;
+    }
+
+    .copy-footer {
+    min-height: 80px;
+    text-align: center;
+    }
+
+    .container-footerA {
+        height: 200px;
+    }
+
+    .desarrollo-img {
+    margin: 0px 25%;
+    }
+
+    .container-footerA {
+        height: auto;
+    }
+
+    .text-info-main {
+        height: auto;
+    }
+
+    .img-masinfo-main {
+        height: auto;
+    }
 }
   
 @media only screen and (min-width: 600px) {
