@@ -12,7 +12,8 @@
         <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
         <title>Cheryt</title>
     </head>
-    <body>
+    <body class="selectedP">
+        <div class="background-header"></div>
         <header class="col-m-12 col-s-12 col-12 container-headerA">
             <div class="col-m-11 col-s-11 col-11 container-headerB">
                 <div class="col-m-12 col-s-12 col-12">
@@ -23,7 +24,7 @@
                         </a>
                     </div>
                     <div class="col-m-12 col-s-12 col-12 container-text-header">
-                        <h1>INSERTAR <br> LEMA</h1>
+                        <h1>MIS PROYECTOS</h1>
                     </div>
                 </div>
                 <div class="container-switch-header">
@@ -42,151 +43,251 @@
         </header>
         <main class="col-m-12 col-s-12 col-8 container-mainA">
             <div class="container-mainB">
-                <div class="col-m-12 col-s-12 col-12">
+                <div class="col-m-12 col-s-12 col-12 container-mainC">
                     <div class="col-m-12 col-s-12 col-12 title-main">
-                        <h2 class="dib col-m-9 col-s-11 col-11">Mis Proyectos</h2><h2 class="dib"><i class="fas fa-arrow-up select"></i><i class="fas fa-arrow-down unselect"></i></h2>
+                        <button class="filtro focus" id="filtro-p">Paginas Web</button>
+                        <button class="filtro" id="filtro-i">Imagenes</button>
+                        <button class="filtro" id="filtro-x">Proyectos</button>
                     </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/Calculadora.PNG">
+                    <div class="salvador">
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/Calculadora.PNG">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-9 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>Calculadora</h2>
-                                    <p>Calculadora Simple.</p><br>
-                                    <p class="published">Publicado el <span class="fecha">08 / Abril / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Calculadora</h2>
+                                        <p>Calculadora Simple.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">08 / Abril / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytUwU/Calculadora" target="_blank">Ir al repositorio</a>
+                                    <a href="https://github.com/CherytUwU/Calculadora" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytUwU/Calculadora" target="_blank">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/EndGaming.PNG">
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/EndGaming.PNG">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-9 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>EndGaming &copy;</h2>
-                                    <p>End Gaming es un prototipo para una pagina web basada en videojuegos y todo lo que conlleva.</p><br>
-                                    <p class="published">Publicado el <span class="fecha">02 / Abril / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>EndGaming &copy;</h2>
+                                        <p>End Gaming es un prototipo para una pagina web basada en videojuegos y todo lo que conlleva.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">02 / Abril / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytUwU/EndGaming">Ir al repositorio</a>
+                                    <a href="https://github.com/CherytUwU/EndGaming" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytUwU/EndGaming">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/Slider.PNG">
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/Slider.PNG">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-9 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>Slider Infinito</h2>
-                                    <p>Slider Infinito REUTILIZABLE maquetado en React.</p><br>
-                                    <p class="published">Publicado el <span class="fecha">29 / Marzo / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Slider Infinito</h2>
+                                        <p>Slider Infinito REUTILIZABLE maquetado en React.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">29 / Marzo / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytUwU/SliderInfinito" target="_blank">Ir al repositorio</a>
+                                    <a href="https://github.com/CherytUwU/SliderInfinito" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytUwU/SliderInfinito" target="_blank">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/BotSargento.png">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Bot Sargento for Discord &copy;</h2>
+                                        <p>Bot Sargento es simplemente un bot :)</p><br>
+                                        <p class="published">Publicado el <span class="fecha">10 / Marzo / 2021</span></p>
+                                    </div>
+                                </div>  
+                                <div class="text-info-a">
+                                    <a href="https://github.com/CherytUwU/DownloadSargento" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/BotSargento.png">
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/CherytProject.PNG">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-9 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>Bot Sargento for Discord &copy;</h2>
-                                    <p>Bot Sargento es simplemente un bot :)</p><br>
-                                    <p class="published">Publicado el <span class="fecha">10 / Marzo / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Cheryt Project &copy;</h2>
+                                        <p>Pagina web diseñada para la venta de productos Gamer.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">07 / Marzo / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytUwU/DownloadSargento" target="_blank">Ir al repositorio</a>
+                                    <a href="https://github.com/CherytUwU/cherytproject" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytUwU/DownloadSargento" target="_blank">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/CherytProject.PNG">
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-proyectos-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/DonJeisson.PNG">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-9 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>Cheryt Project &copy;</h2>
-                                    <p>Pagina web diseñada para la venta de productos Gamer.</p><br>
-                                    <p class="published">Publicado el <span class="fecha">07 / Marzo / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 dib contenedor-text-info-main f-right">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Panaderia Don Jeisson &copy;</h2>
+                                        <p>Prototipo de una pagina web para una panaderia imaginaria.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">16 / Febrero / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytUwU/cherytproject" target="_blank">Ir al repositorio</a>
+                                    <a href="https://github.com/CherytCode/DonJeisson" target="_blank">Ir al repositorio <i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytUwU/cherytproject" target="_blank">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-m-12 col-s-12 col-12 container-proyectos-main">
-                        <div class="col-m-12 col-s-12 col-4 dib f-left">
-                            <div class="col-m-12 col-s-12 col-12 img-main">
-                                <img loading="lazy" src="assets/img/DonJeisson.PNG">
+
+                        <!-- ///////////////////// IMAGENES /////////////////////// -->
+
+                        <div class="col-m-12 col-s-12 col-12 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 imgs-main">
+                                    <img loading="lazy" title="Fondo Astro" src="assets/img/imgart/astro.jpg">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-m-12 col-s-12 col-7 dib f-right">
-                            <div class="dib col-s-10 col-m-11 col-10 text-info-main f-left">
-                                <div class="text-info-p">
-                                    <h2>Panaderia Don Jeisson &copy;</h2>
-                                    <p>Prototipo de una pagina web para una panaderia imaginaria.</p><br>
-                                    <p class="published">Publicado el <span class="fecha">16 / Febrero / 2021</span></p>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main-img">
+                                    <div class="text-info-p">
+                                        <h2>Fondo Astro Simple</h2>
+                                        <p class="published">Publicado el <span class="fecha">19 / Marzo / 2021</span></p>
+                                    </div>
                                 </div>
                                 <div class="text-info-a">
-                                    <a href="https://github.com/CherytCode/DonJeisson" target="_blank">Ir al repositorio</a>
+                                    <a href="https://i.ibb.co/0yYMGKb/fondoheader.jpg" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
                                 </div>
                             </div>
-                            <div class="dib col-s-1 col-m-3 col-1 img-masinfo-main f-left f-left-m f-right-m">
-                                <a href="https://github.com/CherytCode/DonJeisson" target="_blank">
-                                    <i class="fab fa-github" id="git-icon"></i>
-                                </a>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/EndGaming.PNG">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>EndGaming &copy;</h2>
+                                        <p>End Gaming es un prototipo para una pagina web basada en videojuegos y todo lo que conlleva.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">02 / Abril / 2021</span></p>
+                                    </div>
+                                </div>
+                                <div class="text-info-a">
+                                    <a href="https://i.ibb.co/0yYMGKb/fondoheader.jpg" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/Slider.PNG">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Slider Infinito</h2>
+                                        <p>Slider Infinito REUTILIZABLE maquetado en React.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">29 / Marzo / 2021</span></p>
+                                    </div>
+                                </div>
+                                <div class="text-info-a">
+                                    <a href="https://github.com/CherytUwU/SliderInfinito" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/BotSargento.png">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Bot Sargento for Discord &copy;</h2>
+                                        <p>Bot Sargento es simplemente un bot :)</p><br>
+                                        <p class="published">Publicado el <span class="fecha">10 / Marzo / 2021</span></p>
+                                    </div>
+                                </div>  
+                                <div class="text-info-a">
+                                    <a href="https://github.com/CherytUwU/DownloadSargento" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/CherytProject.PNG">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 contenedor-text-info-main dib">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Cheryt Project &copy;</h2>
+                                        <p>Pagina web diseñada para la venta de productos Gamer.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">07 / Marzo / 2021</span></p>
+                                    </div>
+                                </div>
+                                <div class="text-info-a">
+                                    <a href="https://github.com/CherytUwU/cherytproject" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-m-12 col-s-12 col-4 dib container-imagenes-main">
+                            <div class="col-m-12 col-s-12 col-12">
+                                <div class="col-m-12 col-s-12 col-12 img-main">
+                                    <img loading="lazy" src="assets/img/DonJeisson.PNG">
+                                </div>
+                            </div>
+                            <div class="col-m-12 col-s-12 col-12 dib contenedor-text-info-main f-right">
+                                <div class="dib col-s-10 col-m-12 col-12 text-info-main">
+                                    <div class="text-info-p">
+                                        <h2>Panaderia Don Jeisson &copy;</h2>
+                                        <p>Prototipo de una pagina web para una panaderia imaginaria.</p><br>
+                                        <p class="published">Publicado el <span class="fecha">16 / Febrero / 2021</span></p>
+                                    </div>
+                                </div>
+                                <div class="text-info-a">
+                                    <a href="https://github.com/CherytCode/DonJeisson" target="_blank">Ir a la Imagen <i class="fas fa-image"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -195,7 +296,7 @@
         </main>
         <footer class="col-m-12 col-s-12 col-12 container-footerA">
             <div class="container-footerB col-m-11 col-s-11 col-11">
-                <div class="col-8 col-m-12 col-s-12 dib copy-footer">
+                <div class="col-8 col-m-12 col-s-12 dib copy-footer f-left">
                     <p>Esta pagina esta hecha para compartir mi progreso en el desarrollo de paginas web.</p>
                     <p>Derechos Reservados &copy; Cheryt 2021.</p>
                 </div>
